@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Implementations\" />
+    <Folder Include="AutoMapper\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreApp.Data.EF\CoreWebApp.Data.EF.csproj" />
+    <ProjectReference Include="..\CoreApp.Data\CoreWebApp.Data.csproj" />
+    <ProjectReference Include="..\CoreApp.Utilities\CoreWebApp.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
