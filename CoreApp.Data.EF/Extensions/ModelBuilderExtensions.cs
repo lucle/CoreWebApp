@@ -10,7 +10,7 @@ namespace CoreWebApp.Data.EF.Extensions
     {
         public static void AddConfiguration<TEntity>(
             this ModelBuilder modelBuilder,
-            DbEntityConfiguration<TEntity> entityConfiguration) where TEntity : class)
+            DbEntityConfiguration<TEntity> entityConfiguration) where TEntity : class
         {
             modelBuilder.Entity<TEntity>(entityConfiguration.Configure);
         }

@@ -8,6 +8,13 @@ namespace CoreWebApp.Data.Entities
     [Table("AdvertistmentPositions")]
     public class AdvertistmentPosition : DomainEnity<string>
     {
+        public AdvertistmentPosition() { }
+
+        public AdvertistmentPosition(string pageId, string name)
+        {
+            this.PageId = pageId;
+            this.Name = name;
+        }
         [StringLength(20)]
         public string PageId { get; set; }
 

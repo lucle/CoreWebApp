@@ -9,6 +9,14 @@ namespace CoreWebApp.Data.Entities
     [Table("Advertistments")]
     public class Advertistment : DomainEnity<int>, ISwitchable, ISortable
     {
+        public Advertistment() { }
+        public Advertistment(string name, string description, string url, string positionId)
+        {
+            this.Name = name;
+            this.Description = description;
+            this.URL = url;
+            this.PositionId = positionId;
+        }
         [StringLength(250)]
         public string Name { get; set; }
 
@@ -16,7 +24,7 @@ namespace CoreWebApp.Data.Entities
         public string Description { get; set; }
 
         [StringLength(250)]
-        public string Url { get; set; }
+        public string URL { get; set; }
 
         [StringLength(250)]
         public string PositionId { get; set; }
